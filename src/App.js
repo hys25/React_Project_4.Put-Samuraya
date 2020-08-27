@@ -18,10 +18,10 @@ function App(props) {
         <Navbar/>
         <div className="app-wrapper-content">
           <Route path='/dialogs' render={ () => 
-            <DialogsContainer store={props.store}/> 
+            <DialogsContainer /> 
           } />
           <Route path='/profile' render={ () => 
-            <Profile store = {props.store} />
+            <Profile />
           } />
           <Route path='/news' component={News}/>
           <Route path='/music' component={Music}/>
