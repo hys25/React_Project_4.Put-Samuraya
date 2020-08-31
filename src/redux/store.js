@@ -33,6 +33,7 @@ let store = {
         },
         sidebar: {}
     },
+    
     _callSubscriber() {
         console.log('state changed');
     },
