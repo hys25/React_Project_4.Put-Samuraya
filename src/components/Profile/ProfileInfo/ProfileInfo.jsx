@@ -13,7 +13,7 @@ const ProfileInfo = (props) => {
             <img src='https://reviewers.info/design/images/worldmap.png' alt=""/>
         </div>
         <div className={classes.descriptionBlock}>
-            <img src={props.profile.photos.large} />
+            <img src={props.profile.photos.large} alt=''/>
             ava + description
         </div>
     </div>)
