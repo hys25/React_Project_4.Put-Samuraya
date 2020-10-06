@@ -10,22 +10,22 @@ const ProfileStatusWithHooks = (props) => {
 
     const activateEditMode = () => {
         setEditMode(true);
-    };
+    }
 
     const deactivateEditMode = () => {
         setEditMode(false);
         props.updateStatus(status);
-    };
+    }
 
     const onStatusChange = (e) => {
         setStatus(e.currentTarget.value);
-    };
+    }
 
     return (
         <div>
             { !editMode &&
             <div>
-                <span onDoubleClick={ activateEditMode }>{props.status || "-------"}</span>
+                <b>Status: </b> <span onDoubleClick={ activateEditMode }>{props.status || "-------"}</span>
             </div>
             }
             {editMode &&
