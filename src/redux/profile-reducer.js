@@ -54,7 +54,6 @@ const profileReducer = (state = initialState, action) => {
     }
 }
 
-
 export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
@@ -72,10 +71,14 @@ export const getStatus = (userId) => async (dispatch) => {
 }
 
 export const updateStatus = (status) => async (dispatch) => {
-    let response = await profileAPI.updateStatus(status);
+    try {
+        let response = await profileAPI.updateStatus(status);
 
-    if (response.data.resultCode === 0) {
-        dispatch(setStatus(status));
+        if (response.data.resultCode === 0) {
+            dispatch(setStatus(status));
+        }
+    } catch(error) {
+        //
     }
 }
 export const savePhoto = (file) => async (dispatch) => {
