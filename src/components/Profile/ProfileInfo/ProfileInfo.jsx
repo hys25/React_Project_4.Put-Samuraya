@@ -73,5 +73,5 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
 const Contact = ({contactTitle, contactValue}) => {
     return <div className={s.contact}><b>{contactTitle}</b>: {contactValue}</div>
 }
-
+//communication chain: connect()() ==> withRouter ==> ProfileContainer(AJAX) ==> Profile ==> ProfileInfo > ProfileDataForm, ProfileStatusWithHooks
 export default ProfileInfo;

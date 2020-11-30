@@ -60,16 +60,15 @@ export const setStatus = (status) => ({type: SET_STATUS, status})
 export const deletePost = (postId) => ({type: DELETE_POST, postId})
 export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
 
+//thunk - performs asynchronous operations and dispatches actions to reducer
 export const getUserProfile = (userId) => async (dispatch) => {
     const response = await usersAPI.getProfile(userId);
     dispatch(setUserProfile(response.data));
 }
-
 export const getStatus = (userId) => async (dispatch) => {
     let response = await profileAPI.getStatus(userId);
     dispatch(setStatus(response.data));
 }
-
 export const updateStatus = (status) => async (dispatch) => {
     try {
         let response = await profileAPI.updateStatus(status);

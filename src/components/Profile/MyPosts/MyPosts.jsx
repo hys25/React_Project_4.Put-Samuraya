@@ -43,5 +43,4 @@ const MyPosts = React.memo(props => {
         </div>
     )
 });
-
 export default MyPosts;

@@ -13,5 +13,5 @@ const Post = (props) => {
         </div>
     )
 }
-
+//communication chain: connect()() ==> ProfileContainer ==> Profile ==> MyPostsContainer ==> connect(mapStateToProps, mapDispatchToProps)(MyPosts) ==>  MyPosts ==> Post
 export default Post;
